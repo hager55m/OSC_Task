@@ -1,1 +1,16 @@
-
+hager@pop-os:~$ sudo useradd OSC
+[sudo] password for hager: 
+hager@pop-os:~$ sudo passwd OSC
+New password: 
+Retype new password: 
+hager@pop-os:~$ sudo usermod -a -G OSC_group OSC
+hager@pop-os:~$ sudo visudo
+/etc/sudoers:1:7: syntax error
+OSCALL=(ALL:ALL)ALL#
+      ^
+What now? e
+Warning: /etc/sudoers:2:22: User_Alias "OSC" referenced but not defined
+hager@pop-os:~$ sudo su OSC
+$ id
+uid=1002(OSC) gid=1004(OSC) groups=1004(OSC),1005(OSC_group)
+$ 
