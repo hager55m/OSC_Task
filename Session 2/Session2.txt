@@ -1,1 +1,761 @@
+hager@pop-os:~/Downloads$ ls
+Updated-Task-02.zip
+hager@pop-os:~/Downloads$ unzip Updated-Task-02.zip 
+Archive:  Updated-Task-02.zip
+   creating: Updated-Task-02/
+  inflating: Updated-Task-02/README.txt  
+  inflating: Updated-Task-02/.level-1.tar  
+hager@pop-os:~/Downloads$ ls
+Updated-Task-02  Updated-Task-02.zip
+hager@pop-os:~/Downloads$ cd Updated-Task-02
+hager@pop-os:~/Downloads/Updated-Task-02$ ls
+README.txt
+hager@pop-os:~/Downloads/Updated-Task-02$ cat README.txt 
+Locate what you can't see.
+Find out what to do with it.
+hager@pop-os:~/Downloads/Updated-Task-02$ ls -a
+.  ..  .level-1.tar  README.txt
+hager@pop-os:~/Downloads/Updated-Task-02$ tar -xd .level-1.tar 
+tar: You may not specify more than one '-Acdtrux', '--delete' or  '--test-label' option
+Try 'tar --help' or 'tar --usage' for more information.
+hager@pop-os:~/Downloads/Updated-Task-02$ ls -a
+.  ..  .level-1.tar  README.txt
+hager@pop-os:~/Downloads/Updated-Task-02$ file .level-1.tar 
+.level-1.tar: POSIX tar archive (GNU)
+hager@pop-os:~/Downloads/Updated-Task-02$ tar -xf .level-1.tar 
+hager@pop-os:~/Downloads/Updated-Task-02$ ls
+README.txt
+hager@pop-os:~/Downloads/Updated-Task-02$ 
+hager@pop-os:~/Downloads/Updated-Task-02$ cat README.txt 
+Locate what you can't see.
+Find out what to do with it.
+hager@pop-os:~/Downloads/Updated-Task-02$ ls -a
+.  ..  .level-1  .level-1.tar  README.txt
+hager@pop-os:~/Downloads/Updated-Task-02$ cd .level-1
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ ls
+level-2  README.txt
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ cat README.txt 
+Decompress "level-2".
+Hint: Most compression tools require it's suffix.
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ file level-2 
+level-2: gzip compressed data, was "level-2.tar", last modified: Wed Aug  9 17:59:07 2023, from Unix, original size modulo 2^32 112640
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ gunzip level-2 
+gzip: level-2: unknown suffix -- ignored
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ file level-2 
+level-2: gzip compressed data, was "level-2.tar", last modified: Wed Aug  9 17:59:07 2023, from Unix, original size modulo 2^32 112640
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ mv level-2 level-2.gz 
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ gunzip level-2.gz 
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ ls
+level-2  README.txt
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ file level-2 
+level-2: POSIX tar archive (GNU)
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ tar -xf level-2 
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ ls
+level-2  README.txt
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1$ cd level-2/
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2$ 
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2$ find -iname "read*"
+./README.txt
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2$ cat README.txt 
+Locate "level-3".
+Use a general method to decompress it.
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2$ fnd -name "level-3"
+Command 'fnd' not found, did you mean:
+  command 'f3d' from deb f3d (1.2.1+dfsg-2)
+  command 'fnid' from deb id-utils (4.6.28-20200521ss15dab)
+  command 'nd' from deb nd (0.8.2-8build1)
+  command 'snd' from deb snd-gui-jack (22.1-1)
+  command 'snd' from deb snd-gui-pulse (22.1-1)
+  command 'snd' from deb snd-nox (22.1-1)
+  command 'find' from deb findutils (4.8.0-1ubuntu3)
+  command 'fid' from deb id-utils (4.6.28-20200521ss15dab)
+  command 'fnt' from deb fnt (1.4.1-1)
+  command 'and' from deb and (1.2.2-4.2)
+  command 'bnd' from deb bnd (5.0.1-3)
+  command 'fd' from deb fdclone (3.01j-1)
+Try: sudo apt install <deb name>
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2$ find -name level-3
+./gBT5u0vLT5/level-3
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2$ cd gBT5u0vLT5/
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ ls
+level-3
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ file level-3 
+level-3: bzip2 compressed data, block size = 900k
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ bunzip level-3 
+Command 'bunzip' not found, did you mean:
+  command 'funzip' from deb unzip (6.0-26ubuntu3.1)
+  command 'lunzip' from deb lunzip (1.13-1)
+  command 'bunzip2' from deb bzip2 (1.0.8-5build1)
+  command 'ebunzip' from deb eb-utils (4.4.3-13)
+  command 'gunzip' from deb gzip (1.10-4ubuntu4.1)
+  command 'unzip' from deb unzip (6.0-26ubuntu3.1)
+  command 'runzip' from deb rzip (2.1-4.1)
+Try: sudo apt install <deb name>
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ bunzip2 level-3 
+bunzip2: Can't guess original name for level-3 -- using level-3.out
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ ls
+level-3.out
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ bunzip2 level-3.out 
+bunzip2: Can't guess original name for level-3.out -- using level-3.out.out
+bunzip2: level-3.out is not a bzip2 file.
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ ls
+level-3.out
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ file level-3.out 
+level-3.out: POSIX tar archive (GNU)
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ tar -xf level-3.out 
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ ls
+level-3  level-3.out
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5$ cd level-3
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ ls
+00aBxtql7r  6mpTfHgnlX  Bb0kZiNxDz  ePj0HMi3nh  HXq7gqQZ5Z  K56S3V4AQ6  N5lXyVotHN  pH9s3o8foP  sVyNLUXzut  WSxUR7IJd8
+0aba2tPi4R  6vigp6VM7d  BbreWoCXSv  Eqk382soFH  i4CkeVfT7S  K9kyHBbw7y  nBoQgGxoGX  pI49N7Zoxn  T0gYx5T5ks  wZ4LJKpHW6
+0QYBUNJixX  6ZJgIXN3P0  bduLsR7v4K  eT21MMr22o  iCR4qC97HM  Kfce3CFjhh  NdkrRTZmr9  Pmf5TqkkYg  Tbi1MdwiMX  x2CDPgz6Jk
+17pfO4tY4m  71qxiSKgAY  bOKXTvk63r  eT909HWyck  IE4xWwbydi  KJBdbwTmzD  NHag0dTW3U  pO4Lt5DPrX  tEgA7tGwxB  x3Nvoy3Ucl
+1NBA3mJTQC  74gKRNrKVf  BrJvEu79eg  ETRyNzIpYk  IiLRIuK1Fi  kkIu8kVXLo  nlgqxKuRC3  psmL4dk69Y  TezFlyJz9o  x3SkxfEItU
+1pnvifRmA6  77RwxhcZTx  BTf86zJsB3  ev8BCScTMa  IKeqpTmvmW  kOIOppD8hx  NLM96g2hH3  pXXxEWcKkz  TFkiwAHDrG  X62Vq1yIyL
+22ix6enm8X  7C4OyiuQc4  byVoAmiOqs  F5Db7l8s9j  ioOe8b7TsJ  kp1ujuDGKO  Nmuh6DvLkc  q4gh4nODZa  Tt0xmDrg4Y  X6lkChFKsj
+2GsF4Kn1PG  7nMGZvigiL  bze36b6xjZ  F9OYJjkGiB  iOplykVsBo  krWRFtvYDP  nR711EHtmU  qFO0JDSF0N  tZCE2HQg8s  XapfbudtZp
+2IFaRh0Jxc  7PFGHcmfa2  C5KrlOGYlu  fCLOGDR05y  ip23ESdwGT  kT3eEAfVcY  nSC9OkT1E3  Qh9GBAd3mF  uAw4PKT7E0  xBsGYZHomA
+30msooUqJf  7sxFwD2jGw  cDfzzIGULi  Fdvgo1aqTT  IygdcTaoYP  kwmQK5z76U  nwt49CVPtC  QM053Y9Vw1  udqz57oeuX  xigSiLU79u
+3Ig28f7Xa8  82aRYKaCZB  cF1AG2dtLr  FeBBLsJEYS  iymCtoFUVf  L5DOn3iY18  O009zeKkif  R0LpA1qK4F  ufdeX2Dk7C  XkrAGaosYZ
+3SSDrwrwmt  88exEg2MMo  cjcKUQDGLl  FJsgrBEwbJ  j3JsNAEsm1  L8ZzpZTLz5  O0V7mQCicJ  R6okint5JZ  v2ME2J4GuF  xRxKkdCTU8
+3TpnDd6PaY  8IOqsSAWIo  cKiyNtE0yD  flbjrqIXMS  J3K5BY52dp  LeUtklcfmE  o6Q2i1NUXc  R82WkcyQAx  V64A9vKnYq  xYCpOSRLsl
+3wTdqmDig6  8OLXyd5ai0  ClbTpohwVU  fn95Z2sG3o  J5feTUwPso  LKfMizQQjE  OAbH1oFg57  rcEkx0b0WC  vkaOISlk2I  xYlmccmE5f
+3XXNloi4gV  8u4f62oAYb  cStCLsSELl  FYrh0rmC4q  jahdjqT54b  lowIuX2RQI  OaRp7TV8pe  README.txt  vLWtq7N2aR  Y0nB0Ep1my
+3YhvETOVcv  8X1ovlX6ex  ctnOoPIga1  G9UhKYNLgv  JArjmQWPVq  LtH4X99Uw3  ObIefWWqqM  rgNTkxVkxN  VneCQhwmfv  y1IAp2YdZc
+4jFmUBgygR  9CA6eRBprt  cWRi45wacA  GaMed1WIDN  JBDnoFKLcx  LZ5jebusoa  OFx3U24MoP  RnL5L0QLbY  vUbRKbYlKR  Ye8R8ZOvJ9
+4vG2fYLy6B  9GqYmpQsAS  cWZv9iI87X  gcb0bfLbVM  JbMcWq9tku  M1vV6QxnH1  OHWTswrtBk  RPZAvV75tm  Vw5Jm3saUP  ygasPrK3kG
+53IaK7n1np  9my7brVWmo  cX6YaqFDFY  gfLQDXjJAW  Jc0EEC4sua  m59pSiQG2p  ojc7SuLzMV  RU4rJzjPfg  vz1uLzTKjO  YgeyHmPrtP
+5H5OLdA8qE  9NNnGuH7A1  D5JYr3I592  Gksn5ca8Jn  JgVwSWAUsr  m7lRDpRTUJ  orzpz7CBBQ  RWWLnFwGtv  VZw2jtUdZD  ysdoXYcYQq
+5ME7YKcHsa  9QBLcfEf91  dBJSXzmpb1  gOWuBZZgn2  JlhNaDm4f7  MaqkHpS39h  Ou1q6zOh5n  rwZwqdxHhJ  W6AdwbmalK  YVAPjrh8Up
+5tAchjHlmE  a6HPyy5Mz5  Dd9KxIjxSB  GPaN65ikSl  JnOT2WHKbE  MKQErXMkPE  oV3aef60WL  rzSTDqa7oV  WfUKyzFeEv  zEmK04yIqc
+5tJnO1Mwzf  A8SqBitLRB  dK320XCmR0  gu78Zpnknw  jpO4wGMT57  moQuVgMB1f  OXZ3OOGJ7O  SaaZymLdoG  WFyKhZdOcx  ZenzUsQydR
+5VoPA03kvi  aFjSvqXqWE  DKiaUm3WBb  gu92R3c92I  JqAekDHYif  mRET49bBGR  oZ5HOQe6X0  SaQtx8SNld  wgibrPHhJq  zet1AFeHNl
+6AJpxbHYkm  AI8sfDgnhT  Doi1I9Z8TE  gupiPOsJzC  jrMKucOmtp  mu6c42Y1qo  p194n4sSpi  sf7ajd5INC  WhTtCYas3M  zghxQE4JGJ
+6C8RwQ9kGP  AJtW9NcRLy  dqbKkDKbZl  hb4zKjD5G4  jVBkVAbTHj  mwILTjPhCP  p3ARvi0q4F  skVRxkHK04  wJC19bchr2  ZNq1fiVP6F
+6hnWZbro0I  ANRcGwDkvK  dtLZdglPV3  hBv1LejGKu  jVGv0HeZvG  mxG418at98  p6PVEBfSyK  sNrtW0eiZF  WLuasYnMvP  zTfi6AwgZQ
+6JPHCI1K8M  ayHSb1kjNd  Dux6sHDdCW  Hf8ovJhWKI  jvyPQ8Z8ht  mydABLXwyL  PaOzJn0sJV  SqAZPx7CbA  Wm14GdEGcm  zxmnKldpmY
+6lie6mPCRe  b4BF572o41  EHm7bcCxj1  hGCeu2NgZ5  JYdPDFpOIe  n4d9SlSzcV  PDJdFxfgvh  SRgPbWeEG6  wpJyCPLODS  zzgiKI2xSS
+6mnK6keHIi  b957oPA24t  epBL6naqQR  HuSBc8QKYi  k2yYJNQcLu  n4MCXv5XM2  penDnjNMQc  sRhTcN4PIw  wpoGQ7WmSg  zZU6ymQky6
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ find -iname "Rea*"
+./README.txt
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ cat README.txt 
+You're seeking a file with a certain size.
+Find the link to get the size.
+
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ ls -ln
+total 804
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 00aBxtql7r
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 0aba2tPi4R
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 0QYBUNJixX
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 17pfO4tY4m
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 1NBA3mJTQC
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 1pnvifRmA6
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 22ix6enm8X
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 2GsF4Kn1PG
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 2IFaRh0Jxc
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 30msooUqJf
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 3Ig28f7Xa8
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 3SSDrwrwmt
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 3TpnDd6PaY
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 3wTdqmDig6
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 3XXNloi4gV
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 3YhvETOVcv
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 4jFmUBgygR
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 4vG2fYLy6B
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 53IaK7n1np
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 5H5OLdA8qE
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 5ME7YKcHsa
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 5tAchjHlmE
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 5tJnO1Mwzf
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 5VoPA03kvi
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6AJpxbHYkm
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6C8RwQ9kGP
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6hnWZbro0I
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6JPHCI1K8M
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6lie6mPCRe
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 6mnK6keHIi
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6mpTfHgnlX
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6vigp6VM7d
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 6ZJgIXN3P0
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 71qxiSKgAY
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 74gKRNrKVf
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 77RwxhcZTx
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 7C4OyiuQc4
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 7nMGZvigiL
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 7PFGHcmfa2
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 7sxFwD2jGw
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 82aRYKaCZB
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 88exEg2MMo
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 8IOqsSAWIo
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 8OLXyd5ai0
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 8u4f62oAYb
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 8X1ovlX6ex
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 9CA6eRBprt
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 9GqYmpQsAS
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 9my7brVWmo
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 9NNnGuH7A1
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 9QBLcfEf91
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 a6HPyy5Mz5
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 A8SqBitLRB
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 aFjSvqXqWE
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 AI8sfDgnhT
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 AJtW9NcRLy
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 ANRcGwDkvK
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ayHSb1kjNd
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 b4BF572o41
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 b957oPA24t
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Bb0kZiNxDz
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 BbreWoCXSv
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 bduLsR7v4K
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 bOKXTvk63r
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 BrJvEu79eg
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 BTf86zJsB3
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 byVoAmiOqs
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 bze36b6xjZ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 C5KrlOGYlu
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 cDfzzIGULi
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 cF1AG2dtLr
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 cjcKUQDGLl
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 cKiyNtE0yD
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 ClbTpohwVU
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 cStCLsSELl
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 ctnOoPIga1
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 cWRi45wacA
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 cWZv9iI87X
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 cX6YaqFDFY
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 D5JYr3I592
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 dBJSXzmpb1
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Dd9KxIjxSB
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 dK320XCmR0
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 DKiaUm3WBb
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Doi1I9Z8TE
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 dqbKkDKbZl
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 dtLZdglPV3
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Dux6sHDdCW
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 EHm7bcCxj1
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 epBL6naqQR
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 ePj0HMi3nh
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Eqk382soFH
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 eT21MMr22o
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 eT909HWyck
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ETRyNzIpYk
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 ev8BCScTMa
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 F5Db7l8s9j
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 F9OYJjkGiB
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 fCLOGDR05y
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Fdvgo1aqTT
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 FeBBLsJEYS
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 FJsgrBEwbJ
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 flbjrqIXMS
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 fn95Z2sG3o
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 FYrh0rmC4q
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 G9UhKYNLgv
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 GaMed1WIDN
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 gcb0bfLbVM
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 gfLQDXjJAW
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 Gksn5ca8Jn
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 gOWuBZZgn2
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 GPaN65ikSl
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 gu78Zpnknw
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 gu92R3c92I
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 gupiPOsJzC
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 hb4zKjD5G4
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 hBv1LejGKu
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Hf8ovJhWKI
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 hGCeu2NgZ5
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 HuSBc8QKYi
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 HXq7gqQZ5Z
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 i4CkeVfT7S
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 iCR4qC97HM
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 IE4xWwbydi
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 IiLRIuK1Fi
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 IKeqpTmvmW
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ioOe8b7TsJ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 iOplykVsBo
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ip23ESdwGT
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 IygdcTaoYP
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 iymCtoFUVf
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 j3JsNAEsm1
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 J3K5BY52dp
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 J5feTUwPso
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 jahdjqT54b
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 JArjmQWPVq
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 JBDnoFKLcx
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 JbMcWq9tku
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Jc0EEC4sua
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 JgVwSWAUsr
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 JlhNaDm4f7
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 JnOT2WHKbE
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 jpO4wGMT57
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 JqAekDHYif
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 jrMKucOmtp
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 jVBkVAbTHj
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 jVGv0HeZvG
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 jvyPQ8Z8ht
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 JYdPDFpOIe
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 k2yYJNQcLu
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 K56S3V4AQ6
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 K9kyHBbw7y
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 Kfce3CFjhh
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 KJBdbwTmzD
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 kkIu8kVXLo
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 kOIOppD8hx
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 kp1ujuDGKO
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 krWRFtvYDP
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 kT3eEAfVcY
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 kwmQK5z76U
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 L5DOn3iY18
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 L8ZzpZTLz5
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 LeUtklcfmE
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 LKfMizQQjE
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 lowIuX2RQI
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 LtH4X99Uw3
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 LZ5jebusoa
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 M1vV6QxnH1
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 m59pSiQG2p
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 m7lRDpRTUJ
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 MaqkHpS39h
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 MKQErXMkPE
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 moQuVgMB1f
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 mRET49bBGR
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 mu6c42Y1qo
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 mwILTjPhCP
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 mxG418at98
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 mydABLXwyL
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 n4d9SlSzcV
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 n4MCXv5XM2
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 N5lXyVotHN
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 nBoQgGxoGX
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 NdkrRTZmr9
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 NHag0dTW3U
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 nlgqxKuRC3
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 NLM96g2hH3
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 Nmuh6DvLkc
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 nR711EHtmU
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 nSC9OkT1E3
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 nwt49CVPtC
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 O009zeKkif
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 O0V7mQCicJ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 o6Q2i1NUXc
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 OAbH1oFg57
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 OaRp7TV8pe
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ObIefWWqqM
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 OFx3U24MoP
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 OHWTswrtBk
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ojc7SuLzMV
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 orzpz7CBBQ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Ou1q6zOh5n
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 oV3aef60WL
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 OXZ3OOGJ7O
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 oZ5HOQe6X0
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 p194n4sSpi
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 p3ARvi0q4F
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 p6PVEBfSyK
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 PaOzJn0sJV
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 PDJdFxfgvh
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 penDnjNMQc
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 pH9s3o8foP
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 pI49N7Zoxn
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Pmf5TqkkYg
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 pO4Lt5DPrX
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 psmL4dk69Y
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 pXXxEWcKkz
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 q4gh4nODZa
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 qFO0JDSF0N
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Qh9GBAd3mF
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 QM053Y9Vw1
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 R0LpA1qK4F
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 R6okint5JZ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 R82WkcyQAx
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 rcEkx0b0WC
+-rw-r--r-- 1 1000 1000   75 Aug  9 20:35 README.txt
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 rgNTkxVkxN
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 RnL5L0QLbY
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 RPZAvV75tm
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 RU4rJzjPfg
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 RWWLnFwGtv
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 rwZwqdxHhJ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 rzSTDqa7oV
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 SaaZymLdoG
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 SaQtx8SNld
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 sf7ajd5INC
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 skVRxkHK04
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 sNrtW0eiZF
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 SqAZPx7CbA
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 SRgPbWeEG6
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 sRhTcN4PIw
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 sVyNLUXzut
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 T0gYx5T5ks
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 Tbi1MdwiMX
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 tEgA7tGwxB
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 TezFlyJz9o
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 TFkiwAHDrG
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Tt0xmDrg4Y
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 tZCE2HQg8s
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 uAw4PKT7E0
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 udqz57oeuX
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ufdeX2Dk7C
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 v2ME2J4GuF
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 V64A9vKnYq
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 vkaOISlk2I
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 vLWtq7N2aR
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 VneCQhwmfv
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 vUbRKbYlKR
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Vw5Jm3saUP
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 vz1uLzTKjO
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 VZw2jtUdZD
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 W6AdwbmalK
+-rw-r--r-- 1 1000 1000   34 Aug  9 20:35 WfUKyzFeEv
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 WFyKhZdOcx
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 wgibrPHhJq
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 WhTtCYas3M
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 wJC19bchr2
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 WLuasYnMvP
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Wm14GdEGcm
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 wpJyCPLODS
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 wpoGQ7WmSg
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 WSxUR7IJd8
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 wZ4LJKpHW6
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 x2CDPgz6Jk
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 x3Nvoy3Ucl
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 x3SkxfEItU
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 X62Vq1yIyL
+lrwxrwxrwx 1 1000 1000   10 Aug  9 20:35 X6lkChFKsj -> WfUKyzFeEv
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 XapfbudtZp
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 xBsGYZHomA
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 xigSiLU79u
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 XkrAGaosYZ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 xRxKkdCTU8
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 xYCpOSRLsl
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 xYlmccmE5f
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 Y0nB0Ep1my
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 y1IAp2YdZc
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 Ye8R8ZOvJ9
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ygasPrK3kG
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 YgeyHmPrtP
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ysdoXYcYQq
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 YVAPjrh8Up
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 zEmK04yIqc
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ZenzUsQydR
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 zet1AFeHNl
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 zghxQE4JGJ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 ZNq1fiVP6F
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 zTfi6AwgZQ
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 zxmnKldpmY
+drwxr-xr-x 2 1000 1000 4096 Aug  9 20:35 zzgiKI2xSS
+-rw-r--r-- 1 1000 1000    0 Aug  9 20:35 zZU6ymQky6
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ file X6
+X62Vq1yIyL/ X6lkChFKsj  
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ file X6lkChFKsj 
+X6lkChFKsj: symbolic link to WfUKyzFeEv
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ ls -li
+total 804
+396257 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 00aBxtql7r
+396432 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 0aba2tPi4R
+396446 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 0QYBUNJixX
+396511 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 17pfO4tY4m
+396218 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 1NBA3mJTQC
+396264 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 1pnvifRmA6
+396406 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 22ix6enm8X
+396201 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 2GsF4Kn1PG
+396490 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 2IFaRh0Jxc
+396501 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 30msooUqJf
+396128 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 3Ig28f7Xa8
+396435 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 3SSDrwrwmt
+396400 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 3TpnDd6PaY
+396500 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 3wTdqmDig6
+396215 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 3XXNloi4gV
+396514 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 3YhvETOVcv
+396460 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 4jFmUBgygR
+396182 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 4vG2fYLy6B
+396213 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 53IaK7n1np
+396508 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 5H5OLdA8qE
+396193 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 5ME7YKcHsa
+396426 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 5tAchjHlmE
+396205 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 5tJnO1Mwzf
+396504 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 5VoPA03kvi
+396202 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6AJpxbHYkm
+396424 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6C8RwQ9kGP
+396483 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6hnWZbro0I
+396410 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6JPHCI1K8M
+396403 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6lie6mPCRe
+396187 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 6mnK6keHIi
+396244 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6mpTfHgnlX
+396455 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6vigp6VM7d
+396161 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 6ZJgIXN3P0
+396448 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 71qxiSKgAY
+396436 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 74gKRNrKVf
+396192 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 77RwxhcZTx
+396246 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 7C4OyiuQc4
+396489 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 7nMGZvigiL
+396093 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 7PFGHcmfa2
+396179 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 7sxFwD2jGw
+396126 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 82aRYKaCZB
+396454 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 88exEg2MMo
+396135 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 8IOqsSAWIo
+396447 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 8OLXyd5ai0
+396421 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 8u4f62oAYb
+396197 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 8X1ovlX6ex
+396114 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 9CA6eRBprt
+396234 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 9GqYmpQsAS
+396512 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 9my7brVWmo
+396204 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 9NNnGuH7A1
+396203 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 9QBLcfEf91
+396217 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 a6HPyy5Mz5
+396510 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 A8SqBitLRB
+396233 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 aFjSvqXqWE
+396516 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 AI8sfDgnhT
+396441 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 AJtW9NcRLy
+396401 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 ANRcGwDkvK
+396519 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ayHSb1kjNd
+396491 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 b4BF572o41
+396473 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 b957oPA24t
+396242 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Bb0kZiNxDz
+396181 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 BbreWoCXSv
+396224 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 bduLsR7v4K
+396271 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 bOKXTvk63r
+396439 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 BrJvEu79eg
+396258 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 BTf86zJsB3
+396471 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 byVoAmiOqs
+396408 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 bze36b6xjZ
+396176 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 C5KrlOGYlu
+396402 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 cDfzzIGULi
+396174 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 cF1AG2dtLr
+396518 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 cjcKUQDGLl
+396121 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 cKiyNtE0yD
+396098 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 ClbTpohwVU
+396191 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 cStCLsSELl
+396188 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 ctnOoPIga1
+396100 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 cWRi45wacA
+396429 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 cWZv9iI87X
+396261 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 cX6YaqFDFY
+396417 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 D5JYr3I592
+396465 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 dBJSXzmpb1
+396237 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Dd9KxIjxSB
+396275 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 dK320XCmR0
+396230 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 DKiaUm3WBb
+396133 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Doi1I9Z8TE
+396427 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 dqbKkDKbZl
+396158 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 dtLZdglPV3
+396416 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Dux6sHDdCW
+396229 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 EHm7bcCxj1
+396470 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 epBL6naqQR
+396445 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 ePj0HMi3nh
+396131 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Eqk382soFH
+396252 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 eT21MMr22o
+396413 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 eT909HWyck
+396146 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ETRyNzIpYk
+396127 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 ev8BCScTMa
+396397 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 F5Db7l8s9j
+396190 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 F9OYJjkGiB
+396273 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 fCLOGDR05y
+396221 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Fdvgo1aqTT
+396160 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 FeBBLsJEYS
+396175 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 FJsgrBEwbJ
+396140 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 flbjrqIXMS
+396496 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 fn95Z2sG3o
+396220 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 FYrh0rmC4q
+396151 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 G9UhKYNLgv
+396277 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 GaMed1WIDN
+396437 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 gcb0bfLbVM
+396101 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 gfLQDXjJAW
+396515 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 Gksn5ca8Jn
+396521 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 gOWuBZZgn2
+396444 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 GPaN65ikSl
+396168 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 gu78Zpnknw
+396506 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 gu92R3c92I
+396394 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 gupiPOsJzC
+396395 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 hb4zKjD5G4
+396149 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 hBv1LejGKu
+396194 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Hf8ovJhWKI
+396166 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 hGCeu2NgZ5
+396265 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 HuSBc8QKYi
+396461 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 HXq7gqQZ5Z
+396097 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 i4CkeVfT7S
+396422 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 iCR4qC97HM
+396253 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 IE4xWwbydi
+396456 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 IiLRIuK1Fi
+396219 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 IKeqpTmvmW
+396467 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ioOe8b7TsJ
+396443 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 iOplykVsBo
+396276 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ip23ESdwGT
+396195 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 IygdcTaoYP
+396172 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 iymCtoFUVf
+396143 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 j3JsNAEsm1
+396507 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 J3K5BY52dp
+396497 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 J5feTUwPso
+396428 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 jahdjqT54b
+396274 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 JArjmQWPVq
+396241 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 JBDnoFKLcx
+396223 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 JbMcWq9tku
+396165 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Jc0EEC4sua
+396138 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 JgVwSWAUsr
+396393 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 JlhNaDm4f7
+396404 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 JnOT2WHKbE
+396199 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 jpO4wGMT57
+396477 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 JqAekDHYif
+396177 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 jrMKucOmtp
+396433 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 jVBkVAbTHj
+396119 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 jVGv0HeZvG
+396144 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 jvyPQ8Z8ht
+396405 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 JYdPDFpOIe
+396164 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 k2yYJNQcLu
+396178 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 K56S3V4AQ6
+396411 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 K9kyHBbw7y
+396208 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 Kfce3CFjhh
+396480 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 KJBdbwTmzD
+396157 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 kkIu8kVXLo
+396412 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 kOIOppD8hx
+396259 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 kp1ujuDGKO
+396452 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 krWRFtvYDP
+396396 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 kT3eEAfVcY
+396145 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 kwmQK5z76U
+396148 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 L5DOn3iY18
+396409 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 L8ZzpZTLz5
+396485 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 LeUtklcfmE
+396457 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 LKfMizQQjE
+396420 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 lowIuX2RQI
+396503 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 LtH4X99Uw3
+396120 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 LZ5jebusoa
+396462 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 M1vV6QxnH1
+396170 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 m59pSiQG2p
+396279 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 m7lRDpRTUJ
+396438 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 MaqkHpS39h
+396488 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 MKQErXMkPE
+396136 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 moQuVgMB1f
+396112 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 mRET49bBGR
+396418 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 mu6c42Y1qo
+396476 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 mwILTjPhCP
+396453 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 mxG418at98
+396494 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 mydABLXwyL
+396262 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 n4d9SlSzcV
+396250 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 n4MCXv5XM2
+396094 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 N5lXyVotHN
+396478 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 nBoQgGxoGX
+396130 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 NdkrRTZmr9
+396222 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 NHag0dTW3U
+396141 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 nlgqxKuRC3
+396189 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 NLM96g2hH3
+396472 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 Nmuh6DvLkc
+396210 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 nR711EHtmU
+396207 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 nSC9OkT1E3
+396492 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 nwt49CVPtC
+396272 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 O009zeKkif
+396240 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 O0V7mQCicJ
+396124 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 o6Q2i1NUXc
+396231 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 OAbH1oFg57
+396398 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 OaRp7TV8pe
+396139 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ObIefWWqqM
+396099 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 OFx3U24MoP
+396095 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 OHWTswrtBk
+396129 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ojc7SuLzMV
+396268 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 orzpz7CBBQ
+396163 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Ou1q6zOh5n
+396227 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 oV3aef60WL
+396423 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 OXZ3OOGJ7O
+396464 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 oZ5HOQe6X0
+396254 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 p194n4sSpi
+396232 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 p3ARvi0q4F
+396132 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 p6PVEBfSyK
+396256 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 PaOzJn0sJV
+396214 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 PDJdFxfgvh
+396209 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 penDnjNMQc
+396267 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 pH9s3o8foP
+396399 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 pI49N7Zoxn
+396260 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Pmf5TqkkYg
+396216 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 pO4Lt5DPrX
+396154 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 psmL4dk69Y
+396493 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 pXXxEWcKkz
+396137 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 q4gh4nODZa
+396185 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 qFO0JDSF0N
+396152 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Qh9GBAd3mF
+396487 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 QM053Y9Vw1
+396225 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 R0LpA1qK4F
+396450 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 R6okint5JZ
+396247 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 R82WkcyQAx
+396245 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 rcEkx0b0WC
+396155 -rw-r--r-- 1 hager hager   75 Aug  9 20:35 README.txt
+396171 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 rgNTkxVkxN
+396419 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 RnL5L0QLbY
+396425 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 RPZAvV75tm
+396414 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 RU4rJzjPfg
+396434 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 RWWLnFwGtv
+396468 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 rwZwqdxHhJ
+396486 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 rzSTDqa7oV
+396430 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 SaaZymLdoG
+396159 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 SaQtx8SNld
+396183 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 sf7ajd5INC
+396392 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 skVRxkHK04
+396391 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 sNrtW0eiZF
+396147 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 SqAZPx7CbA
+396228 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 SRgPbWeEG6
+396270 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 sRhTcN4PIw
+396184 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 sVyNLUXzut
+396407 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 T0gYx5T5ks
+396499 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 Tbi1MdwiMX
+396248 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 tEgA7tGwxB
+396173 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 TezFlyJz9o
+396484 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 TFkiwAHDrG
+396211 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Tt0xmDrg4Y
+396226 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 tZCE2HQg8s
+396263 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 uAw4PKT7E0
+396431 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 udqz57oeuX
+396169 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ufdeX2Dk7C
+396206 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 v2ME2J4GuF
+396239 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 V64A9vKnYq
+396522 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 vkaOISlk2I
+396156 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 vLWtq7N2aR
+396415 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 VneCQhwmfv
+396479 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 vUbRKbYlKR
+396186 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Vw5Jm3saUP
+396122 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 vz1uLzTKjO
+396466 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 VZw2jtUdZD
+396142 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 W6AdwbmalK
+396150 -rw-r--r-- 1 hager hager   34 Aug  9 20:35 WfUKyzFeEv
+396180 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 WFyKhZdOcx
+396249 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 wgibrPHhJq
+396449 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 WhTtCYas3M
+396469 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 wJC19bchr2
+396517 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 WLuasYnMvP
+396463 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Wm14GdEGcm
+396442 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 wpJyCPLODS
+396162 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 wpoGQ7WmSg
+396238 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 WSxUR7IJd8
+396278 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 wZ4LJKpHW6
+396451 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 x2CDPgz6Jk
+396167 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 x3Nvoy3Ucl
+396458 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 x3SkxfEItU
+396498 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 X62Vq1yIyL
+396134 lrwxrwxrwx 1 hager hager   10 Aug  9 20:35 X6lkChFKsj -> WfUKyzFeEv
+396198 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 XapfbudtZp
+396200 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 xBsGYZHomA
+396482 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 xigSiLU79u
+396096 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 XkrAGaosYZ
+396495 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 xRxKkdCTU8
+396475 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 xYCpOSRLsl
+396102 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 xYlmccmE5f
+396153 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 Y0nB0Ep1my
+396513 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 y1IAp2YdZc
+396474 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 Ye8R8ZOvJ9
+396509 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ygasPrK3kG
+396459 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 YgeyHmPrtP
+396266 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ysdoXYcYQq
+396502 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 YVAPjrh8Up
+396269 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 zEmK04yIqc
+396440 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ZenzUsQydR
+396196 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 zet1AFeHNl
+396212 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 zghxQE4JGJ
+396520 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 ZNq1fiVP6F
+396505 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 zTfi6AwgZQ
+396481 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 zxmnKldpmY
+396255 drwxr-xr-x 2 hager hager 4096 Aug  9 20:35 zzgiKI2xSS
+396251 -rw-r--r-- 1 hager hager    0 Aug  9 20:35 zZU6ymQky6
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ ls -l X6lkChFKsj 
+lrwxrwxrwx 1 hager hager 10 Aug  9 20:35 X6lkChFKsj -> WfUKyzFeEv
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ find -name WFUKyzFeEv
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ find -name WfUKyzFeEv
+./WfUKyzFeEv
+hager@pop-os:~/Downloads/Updated-Task-02/.level-1/level-2/gBT5u0vLT5/level-3$ cat  WfUKyzFeEv
+73 bytes is your target file size
 
