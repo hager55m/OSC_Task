@@ -103,3 +103,33 @@ OSC@pop-os:~/permission_practice$
 
 
 
+
+####### step 4
+hager@pop-os:~$ sleep 1000 &
+[1] 6422
+hager@pop-os:~$ ps
+    PID TTY          TIME CMD
+   6366 pts/0    00:00:00 bash
+   6422 pts/0    00:00:00 sleep
+   6423 pts/0    00:00:00 ps
+hager@pop-os:~$ kill -9 6422
+hager@pop-os:~$ nano
+
+
+Use "fg" to return to nano.
+[1]   Killed                  sleep 1000
+
+[2]+  Stopped                 nano
+hager@pop-os:~$ jobs
+[2]+  Stopped                 nano
+hager@pop-os:~$ kill -9 %2
+
+[2]+  Stopped                 nano
+hager@pop-os:~$ ps
+    PID TTY          TIME CMD
+   6366 pts/0    00:00:00 bash
+   6428 pts/0    00:00:00 ps
+[2]+  Killed                  nano
+hager@pop-os:~$ 
+
+
