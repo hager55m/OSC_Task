@@ -1,4 +1,30 @@
+step 1
 hager@pop-os:~$ nano system_info.sh
 hager@pop-os:~$ bash system_info.sh 
 username hager
 kernel version : 6.2.6-76060206-generic
+
+
+step 2
+hager@pop-os:~$ cd Desktop/
+hager@pop-os:~/Desktop$ nano file_check.sh
+hager@pop-os:~/Desktop$ nano file_check.sh
+hager@pop-os:~/Desktop$ touch file1.txt
+hager@pop-os:~/Desktop$ echo "this is file1.txt"> file1.txt 
+hager@pop-os:~/Desktop$ cat file1.txt 
+this is file1.txt
+hager@pop-os:~/Desktop$ nano file_check.sh
+hager@pop-os:~/Desktop$ bash file_check.sh ~/Desktop/ file1.txt 
+file exists
+content of file1.txt
+this is file1.txt
+hager@pop-os:~/Desktop$ 
+
+step 3
+hager@pop-os:~/Desktop$ nano rename_files.sh 
+hager@pop-os:~/Desktop$ bash rename_files.sh  png image
+hager@pop-os:~/Desktop$ ls
+cat.jpg  dog.jpg  image1.png  image2.png  rename_files.sh  text.txt
+hager@pop-os:~/Desktop$ 
+
+step 4
